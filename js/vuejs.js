@@ -16,9 +16,8 @@ const app = Vue.createApp({
             axios.get(this.mailUrl)
                 .then((response) => {
                     this.mails.push(response.data.response);
-                    console.log(this.mails)
                 }).catch(error => {
-
+                    
                 }).then(() => {
                     this.isLoading = false;
 
