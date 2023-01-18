@@ -3,6 +3,7 @@ console.log('Vue ok', Vue);
 const app = Vue.createApp({
     data() {
         return {
+            number:10,
             isLoading: false,
             mails: [],
             mailUrl: 'https://flynn.boolean.careers/exercises/api/random/mail',
@@ -22,6 +23,14 @@ const app = Vue.createApp({
                     this.isLoading = false;
 
                 });
+        },
+        getLength() {
+            const wait = setInterval(() => {
+                        if(this.mails.length === this.number){
+                            this.isLoading = false;
+                            clearInterval(alt);
+                        }
+                    }, 10)
         }
 
     },

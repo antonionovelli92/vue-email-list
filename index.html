@@ -36,13 +36,13 @@
     <script  src="js/script.js"></script>
 </head>
 <body>
-    <div id="root">
-        <div v-if="isLoading" class="spinner-border" role="status">                 
+    <div id="root" class="container">
+        <div v-if="isLoading" class=" spinner-border" role="status">                 
             <span class="visually-hidden">Loading...</span>
         </div>
-        <div v-else >
-            <ul>
-                <li v-for="mail in mails">{{mail}}</li>
+        <div v-else class="card text-bg-primary mb-3">
+            <ul class="card-body">
+                <li class="card-text" v-for="(mail, i) in mails">{{mail}}</li>
             </ul>
         </div>   
     </div>
